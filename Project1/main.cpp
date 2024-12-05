@@ -33,6 +33,8 @@ int main()
 			create_array(nums, N);
 			break;
 		}
+		//Сумма отрицательных элементов массива
+		sum_negative_element(nums, N);
 		//Поиск максимального элемента и минимального
 		double max = nums[0], min = nums[0];
 		for (int i = 1; i < N; i++)
