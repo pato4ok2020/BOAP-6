@@ -13,12 +13,14 @@ void product_between(double* nums, int N, int index_max, int index_min, double m
 		cout << "Расположения максимального и минимального элементов совпадают" << endl;
 		cout << "Максимальный и минимальный элемент равны: " << max;
 	}
+
 	else if (index_max + 1 == index_min || index_min + 1 == index_max)
 	{
 		cout << "Максимальный элемент массива: " << max << endl;
 		cout << "Минимальный элемент массива: " << min << endl;
 		cout << "Между максимальным и минимальным элементом массива нет других элементов" << endl;
 	}
+
 	else if (index_min > index_max)
 	{
 		double res = 1;
@@ -31,6 +33,7 @@ void product_between(double* nums, int N, int index_max, int index_min, double m
 		cout << "Минимальный элемент массива: " << min << endl;
 		cout << "Произведение элементов массива между максимальным и минимальным: " << res << endl;
 	}
+
 	else if (index_min < index_max)
 	{
 		double res = 1;
@@ -38,6 +41,7 @@ void product_between(double* nums, int N, int index_max, int index_min, double m
 		{
 			res *= nums[i];
 		}
+
 		cout << "Максимальный элемент массива: " << max << endl;
 		cout << "Минимальный элемент массива: " << min << endl;
 		cout << "Произведение элементов массива между минимальным и максимальным: " << res << endl;
