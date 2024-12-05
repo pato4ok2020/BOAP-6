@@ -33,22 +33,14 @@ int main()
 			create_array(nums, N);
 			break;
 		}
+
 		//Сумма отрицательных элементов массива
 		sum_negative_element(nums, N);
+
 		//Поиск максимального элемента и минимального
 		double max = nums[0], min = nums[0];
-		for (int i = 1; i < N; i++)
-		{
-			if (*(numsPtr + i) > max)
-			{
-				max = *(numsPtr + i);
-			}
+		find_min_max(nums, N, max, min);
 
-			if (*(numsPtr + i) < min)
-			{
-				min = *(numsPtr + i);
-			}
-		}
 		//Нахождение индексов максимального и минимального элементов
 		int index_max = NULL, index_min = NULL;
 		if (max != min)
@@ -93,6 +85,7 @@ int main()
 				}
 			}
 		}
+
 		//Произведение элементов между максимальным и минимальным
 		if (index_max == index_min)
 		{
@@ -128,6 +121,7 @@ int main()
 			cout << "Минимальный элемент массива: " << min << endl;
 			cout << "Произведение элементов массива между минимальным и максимальным: " << res << endl;
 		}
+
 		//Уплотнение массива убиранием все нулевых символов
 		int counter = 0;
 		for (int j = 0, i = 0; j < N; j++)
