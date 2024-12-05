@@ -6,12 +6,12 @@
 #include "Unit.h"
 
 using namespace std;
-void product_between(double* nums, int N, int index_max, int index_min, double max, double min)
+void product_between(double* nums, int N, int &index_max, int &index_min, double &max, double &min)
 {
 	if (index_max == index_min)
 	{
 		cout << "Расположения максимального и минимального элементов совпадают" << endl;
-		cout << "Максимальный и минимальный элемент равны: " << max;
+		cout << "Максимальный и минимальный элемент равны: " << max << endl;
 	}
 
 	else if (index_max + 1 == index_min || index_min + 1 == index_max)

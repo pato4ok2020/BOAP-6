@@ -134,6 +134,7 @@
     <ClCompile Include="find_min_max_index.cpp" />
     <ClCompile Include="product_between.cpp" />
     <ClCompile Include="compaction.cpp" />
+    <ClCompile Include="sum_negative_element.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Unit.h" />

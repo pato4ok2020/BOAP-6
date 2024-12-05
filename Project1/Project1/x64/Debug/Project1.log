@@ -1,10 +1,10 @@
-﻿  main.cpp
-D:\pato4ok2020\Документы\Учеба\Основы алгоритмизации и программирования\ОАиП л6 в1\BOAP-6\Project1\main.cpp(36,15): warning C4244: +=: преобразование "double" в "int", возможна потеря данных
-  create_array_random.cpp
+﻿  compaction.cpp
   create_array.cpp
+  create_array_random.cpp
   find_min_max.cpp
   find_min_max_index.cpp
+  main.cpp
   product_between.cpp
-  compaction.cpp
+  sum_negative_element.cpp
   Создание кода...
   Project1.vcxproj -> D:\pato4ok2020\Документы\Учеба\Основы алгоритмизации и программирования\ОАиП л6 в1\BOAP-6\Project1\x64\Debug\Project1.exe

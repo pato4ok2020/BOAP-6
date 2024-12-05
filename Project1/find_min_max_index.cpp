@@ -6,7 +6,7 @@
 #include "Unit.h"
 
 using namespace std;
-void find_min_max_index(double* nums, int N, double min, double max, int index_max, int index_min)
+void find_min_max_index(double* nums, int N, double &min, double &max, int &index_max, int &index_min)
 {
 	if (max != min)
 	{
