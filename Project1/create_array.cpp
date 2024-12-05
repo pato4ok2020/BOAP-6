@@ -8,5 +8,9 @@
 using namespace std;
 void create_array(double* nums, int N)
 {
-
+	for (int i = 0; i < N; i++)
+	{
+		cout << "¬ведите элемент массива номер " << i + 1 << ": ";
+		cin >> nums[i];
+	}
 }

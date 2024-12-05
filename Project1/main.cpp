@@ -10,8 +10,11 @@ int main()
 {
 	setlocale(LC_ALL, "Russian");
 	int N;
+	char answ;
 	cout << "Введите количество элементов массива: ";
 	cin >> N;
+	cout << "Ввести элементы рандомно?(y/n)" << endl;
+	cin >> answ;
 	//Провера числа N
 	bool check_N = true;
 	if (N <= 0)
@@ -20,26 +23,18 @@ int main()
 	}
 	if (check_N)
 	{
-		int result = 0;
-		//Создание массива из N действительных чисел
 		double* nums = new double[N];
-		double* numsPtr = &nums[0];
-		for (int i = 0; i < N; i++)
+		switch (answ)
 		{
-			cout << "Введите действительное число номер " << i + 1 << ": ";
-			cin >> *(numsPtr + i);
+		case 'y':
+			create_array_random(nums, N);
+			break;
+		case 'n':
+			create_array(nums, N);
+			break;
 		}
-		for (int i = 0; i < N; i++)
-		{
-			if (*(numsPtr + i) < 0)
-			{
-				result += *(numsPtr + i);
-			}
-		}
-		cout << "Сумма отрицательных элементов массива: " << result << endl;
-		
 		//Поиск максимального элемента и минимального
-		double max = *numsPtr, min = *numsPtr;
+		double max = nums[0], min = nums[0];
 		for (int i = 1; i < N; i++)
 		{
 			if (*(numsPtr + i) > max)
