@@ -46,40 +46,7 @@ int main()
 		find_min_max_index(nums, N, min, max, index_max, index_min);
 
 		//Произведение элементов между максимальным и минимальным
-		if (index_max == index_min)
-		{
-			cout << "Расположения максимального и минимального элементов совпадают" << endl;
-			cout << "Максимальный и минимальный элемент равны: " << max;
-		}
-		else if (index_max + 1 == index_min || index_min + 1 == index_max)
-		{
-			cout << "Максимальный элемент массива: " << max << endl;
-			cout << "Минимальный элемент массива: " << min << endl;
-			cout << "Между максимальным и минимальным элементом массива нет других элементов" << endl;
-		}
-		else if (index_min > index_max)
-		{
-			double res = 1;
-			for (int i = index_max + 1; i < index_min; i++)
-			{
-				res *= *(numsPtr + i);
-			}
-
-			cout << "Максимальный элемент массива: " << max << endl;
-			cout << "Минимальный элемент массива: " << min << endl;
-			cout << "Произведение элементов массива между максимальным и минимальным: " << res << endl;
-		}
-		else if (index_min < index_max)
-		{
-			double res = 1;
-			for (int i = index_min + 1; i < index_max; i++)
-			{
-				res *= *(numsPtr + i);
-			}
-			cout << "Максимальный элемент массива: " << max << endl;
-			cout << "Минимальный элемент массива: " << min << endl;
-			cout << "Произведение элементов массива между минимальным и максимальным: " << res << endl;
-		}
+		product_between(nums, N, index_max, index_min, max, min);
 
 		//Уплотнение массива убиранием все нулевых символов
 		int counter = 0;
